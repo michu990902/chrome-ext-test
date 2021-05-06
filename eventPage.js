@@ -18,3 +18,15 @@ chrome.contextMenus.onClicked.addListener(function(clickData) {
         chrome.notifications.create('', notiObject);
     }
 });
+
+chrome.storage.onChanged.addListener(function(changes, storageName){
+    chrome.browserAction.setBadgeText({text: "test 1"})
+});
+
+
+// chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+chrome.tabs.query({currentWindow: true}, function(tabs) {
+    // chrome.pageAction.show(tabs[0].id);
+    const len = tabs.length;
+    chrome.browserAction.setBadgeText({text: len.toString()})
+});
