@@ -1,3 +1,5 @@
+https://chrome.google.com/webstore/devconsole
+
 3 types
 - on toolbar and accessible all time
 - page ext
